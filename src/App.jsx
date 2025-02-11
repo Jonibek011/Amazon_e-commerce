@@ -1,4 +1,5 @@
 import "./App.css";
+import Navbar from "./components/Navbar.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { getUsers } from "./slices/UserSlice.js";
@@ -22,6 +23,7 @@ function App() {
   console.log(products);
   return (
     <div className="w-[100vw] h-[100vh] ">
+      <Navbar />
       {products.map((product, index) => {
         return <h1 key={index}>{product.product_title}</h1>;
       })}
